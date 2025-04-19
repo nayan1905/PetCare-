@@ -1,0 +1,25 @@
+<div *ngIf="pet" class="container mt-4">
+  <h2>{{ pet.name }} ({{ pet.species }})</h2>
+
+  <div class="card mt-3 p-3 shadow-sm">
+    <p><strong>Age:</strong> {{ pet.age }}</p>
+    <p><strong>Vaccination Date:</strong> {{ pet.vaccinationDate | date }}</p>
+    <p><strong>Common Medical Problems:</strong> {{ pet.commonMedicalProblems }}</p>
+    <p><strong>Care Instructions:</strong> {{ pet.careInstructions }}</p>
+
+    <!-- Display next vet visit date -->
+    <p><strong>Next Vet Visit Date:</strong> 
+      {{ pet.nextVetVisitDate ? (pet.nextVetVisitDate | date) : 'Not Set' }}
+    </p>
+
+    <!-- Buttons to Edit and Delete -->
+    <div class="mt-3">
+      <button class="btn btn-primary me-2" (click)="editPet()">Edit</button>
+      <button class="btn btn-danger" (click)="onDelete()">Delete</button>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="!pet" class="text-center mt-5">
+  <p class="text-muted">Pet not found.</p>
+</div>

@@ -1,0 +1,58 @@
+body {
+  background-image: url('https://cdn.pixabay.com/photo/2021/04/04/10/39/paw-6150417_1280.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  max-width: 700px;
+  margin: 50px auto;
+  background-color: rgba(255, 255, 255, 0.92);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+  color: #2d3436;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.detail-group {
+  margin-bottom: 20px;
+}
+
+.label {
+  font-weight: bold;
+  color: #636e72;
+  font-size: 16px;
+}
+
+.value {
+  font-size: 17px;
+  color: #2d3436;
+}
+
+.back-btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  background-color: #00cec9;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #01a3a4;
+}

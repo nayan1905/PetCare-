@@ -1,0 +1,43 @@
+<div class="container mt-4">
+  <h2>{{ isEditMode ? 'Edit Pet' : 'Add New Pet' }}</h2>
+
+  <form [formGroup]="petForm" (ngSubmit)="onSubmit()" class="card p-4 shadow-sm mt-3">
+    <div class="mb-3">
+      <label for="name" class="form-label">Pet Name</label>
+      <input id="name" formControlName="name" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+      <label for="species" class="form-label">Species</label>
+      <input id="species" formControlName="species" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+      <label for="age" class="form-label">Age</label>
+      <input type="number" id="age" formControlName="age" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+      <label for="vaccinationDate" class="form-label">Vaccination Date</label>
+      <input type="date" id="vaccinationDate" formControlName="vaccinationDate" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+      <label for="commonMedicalProblems" class="form-label">Common Medical Problems</label>
+      <textarea id="commonMedicalProblems" formControlName="commonMedicalProblems" class="form-control"></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label for="careInstructions" class="form-label">Care Instructions</label>
+      <textarea id="careInstructions" formControlName="careInstructions" class="form-control"></textarea>
+    </div>
+
+    <!-- Next Vet Visit Date Field -->
+    <div class="mb-3">
+      <label for="nextVetVisitDate" class="form-label">Next Vet Visit Date</label>
+      <input type="date" id="nextVetVisitDate" formControlName="nextVetVisitDate" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-success">{{ isEditMode ? 'Update' : 'Add' }}</button>
+  </form>
+</div>
